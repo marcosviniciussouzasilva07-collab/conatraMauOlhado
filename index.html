@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contra Mau Olhado - Estratégia de Marketing</title>
+    
+    <!-- ======================================================= -->
+    <!-- META TAGS PARA COMPARTILHAMENTO (WhatsApp, FB, LinkedIn)-->
+    <!-- ======================================================= -->
+    <meta property="og:title" content="Contra Mau Olhado - Plano de Marketing">
+    <meta property="og:description" content="Camisetas com DNA nordestino. Estratégia completa de Marketing Orgânico e Tráfego Pago.">
+    <meta property="og:type" content="website">
+    
+    <!-- ⚠️ IMPORTANTE SENIOR DEV: Substitua 'SEU_DOMINIO_AQUI.com.br' pelo seu domínio real após o deploy. 
+         Redes sociais exigem URLs ABSOLUTAS para renderizar a imagem corretamente. -->
+    <meta property="og:url" content="https://SEU_DOMINIO_AQUI.com.br">
+    <meta property="og:image" content="https://SEU_DOMINIO_AQUI.com.br/ContramauOlhado.jpeg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Cards (Garante preview no X/Twitter e Telegram) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contra Mau Olhado - Plano de Marketing">
+    <meta name="twitter:description" content="Camisetas com DNA nordestino. Estratégia completa de Marketing Orgânico e Tráfego Pago.">
+    <meta name="twitter:image" content="https://SEU_DOMINIO_AQUI.com.br/ContramauOlhado.jpeg">
+
+    <!-- Importando as fontes do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        /* Variáveis de Cores e Tipografia - Contra Mau Olhado */
+        :root {
+            --off-white: #fdfbf7;
+            --verde-escuro: #1b3b2d;
+            --palha: #e6d3a8;
+            --madeira: #754c24;
+            --texto-claro: #fdfbf7;
+            
+            --fonte-titulo: 'Fraunces', serif;
+            --fonte-texto: 'DM Sans', sans-serif;
+        }
+
+        /* Reset e Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--fonte-texto);
+            background-color: var(--off-white);
+            color: var(--verde-escuro);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--fonte-titulo);
+            color: var(--verde-escuro);
+        }
+
+        /* Header / Hero Section */
+        header {
+            background-color: var(--verde-escuro);
+            color: var(--texto-claro);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 6px solid var(--palha);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo-text {
+            font-family: var(--fonte-titulo);
+            font-size: 3.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 0.5rem;
+            color: var(--texto-claro);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--palha);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        header h2 {
+            color: var(--off-white);
+            font-family: var(--fonte-texto);
+            font-weight: 400;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        /* Navegação por Abas */
+        .tabs-container {
+            max-width: 1000px;
+            margin: -2rem auto 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .tab-btn {
+            background-color: var(--off-white);
+            border: 2px solid var(--palha);
+            padding: 1rem 2rem;
+            font-family: var(--fonte-texto);
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--verde-escuro);
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn:hover {
+            transform: translateY(-2px);
+            background-color: var(--palha);
+        }
+
+        .tab-btn.active {
+            background-color: var(--madeira);
+            border-color: var(--madeira);
+            color: var(--texto-claro);
+        }
+
+        /* Conteúdo Principal */
+        main {
+            max-width: 1000px;
+            margin: 0 auto 4rem;
+            padding: 0 1rem;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Cards Grid */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(27, 59, 45, 0.05);
+            border-top: 4px solid var(--madeira);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--palha);
+            padding-bottom: 0.5rem;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        ul li::before {
+            content: "🌿";
+            font-size: 0.9rem;
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+        /* Tabela de Linhas Editoriais */
+        .table-container {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(27, 59, 45, 0.05);
+            margin-bottom: 2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 1.5rem;
+            text-align: left;
+            border-bottom: 1px solid var(--palha);
+        }
+
+        th {
+            background-color: var(--verde-escuro);
+            color: var(--palha);
+            font-family: var(--fonte-titulo);
+            font-size: 1.3rem;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Funil de Vendas */
+        .funnel-stage {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            border-left: 8px solid var(--verde-escuro);
+            box-shadow: 0 4px 15px rgba(27, 59, 45, 0.05);
+        }
+        
+        .funnel-topo { border-color: var(--palha); }
+        .funnel-meio { border-color: var(--madeira); }
+        .funnel-fundo { border-color: var(--verde-escuro); }
+
+        .funnel-stage h3 { border: none; padding: 0; margin-bottom: 0.5rem;}
+        .funnel-meta { font-size: 0.9rem; color: var(--madeira); margin-bottom: 1.5rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;}
+
+        /* Rodapé */
+        footer {
+            background-color: var(--verde-escuro);
+            color: var(--texto-claro);
+            text-align: center;
+            padding: 2rem;
+            font-family: var(--fonte-texto);
+            font-size: 0.95rem;
+            border-top: 6px solid var(--madeira);
+        }
+        
+        footer a {
+            color: var(--palha);
+            text-decoration: none;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-text">Contra Mau Olhado</div>
+        <p>Made in Brasil, DNA nordestino | Boas vibrações, vestidas.</p>
+        <h2>Plano de Marketing Digital e Tráfego Pago</h2>
+    </header>
+
+    <!-- Navegação Dinâmica -->
+    <div class="tabs-container">
+        <button class="tab-btn active" onclick="openTab(event, 'marca')">Marca & Posicionamento</button>
+        <button class="tab-btn" onclick="openTab(event, 'organico')">Marketing Orgânico</button>
+        <button class="tab-btn" onclick="openTab(event, 'trafego')">Tráfego Pago</button>
+    </div>
+
+    <main>
+        <!-- ABA 1: Marca e Posicionamento -->
+        <section id="marca" class="tab-content active">
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Ponto de Partida</h3>
+                    <p>O perfil conta com 8 posts, 76 seguidores, biografia bem definida e site próprio. O próximo passo é fazer com que a marca seja reconhecida antes do produto: quem vê o logotipo deve lembrar de boas vibrações e do orgulho nordestino.</p>
+                </div>
+                <div class="card">
+                    <h3>Posicionamento</h3>
+                    <p>Marca brasileira de camisetas que veste proteção, cultura e a alegria do Nordeste. Roupas com significado, feitas para quem gosta de se sentir bem e de presentear.</p>
+                </div>
+                <div class="card">
+                    <h3>Tom de Voz</h3>
+                    <p>Caloroso, bem-humorado e autêntico. Comunica-se como gente da terra, com respeito à cultura popular, sem exageros e de forma sempre positiva.</p>
+                </div>
+                <div class="card">
+                    <h3>Identidade Visual</h3>
+                    <p><strong>Cores:</strong> Off-white, Verde-escuro, Palha e Madeira.</p>
+                    <p><strong>Tipografia:</strong> Fraunces (títulos) e DM Sans (textos).</p>
+                    <p><strong>Assinatura:</strong> "Boas vibrações, vestidas." / Selo <em>Made in Brasil</em> nas embalagens.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABA 2: Marketing Orgânico -->
+        <section id="organico" class="tab-content">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Pilar</th>
+                            <th>Conteúdo</th>
+                            <th>Formato</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Nossa marca</strong></td>
+                            <td>Propósito, história dos criadores, significado do nome, valores e manifesto.</td>
+                            <td>Reels, Carrossel</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Feito no Brasil</strong></td>
+                            <td>Bastidores da produção, escolha de tecidos, estamparia, embalagem e o cuidado com cada peça.</td>
+                            <td>Reels, Stories</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Gente que veste</strong></td>
+                            <td>Fotos e vídeos de clientes no dia a dia: na rua, no trabalho ou em festas.</td>
+                            <td>Feed, Reposts</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Nordeste em cena</strong></td>
+                            <td>São João, Dois de Julho, feiras, ritmos, gírias e paisagens locais.</td>
+                            <td>Reels, Stories</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Engajamento</h3>
+                    <ul>
+                        <li>Campanha #ContraMauOlhado com cupons exclusivos para clientes.</li>
+                        <li>Enquete interativa: "Qual é o seu ritual de boas vibrações?".</li>
+                        <li>Caixa de perguntas sobre crenças e simpatias regionais.</li>
+                        <li>Sorteio de um kit completo da marca.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Parcerias Locais</h3>
+                    <ul>
+                        <li>Microinfluenciadores baianos focados em cultura e moda.</li>
+                        <li>Lojas-conceito e cafeterias em Salvador.</li>
+                        <li>Artistas locais para colaboração em estampas limitadas.</li>
+                        <li>Participação em feiras de moda independente.</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Otimização de Perfil</h3>
+                    <ul>
+                        <li>Fixar 3 posts principais: manifesto, lançamento de coleção e prova social.</li>
+                        <li>Destaques organizados: Coleção, Medidas, Prazos e Clientes.</li>
+                        <li>Capas de destaques padronizadas na paleta (verde e palha).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABA 3: Tráfego Pago -->
+        <section id="trafego" class="tab-content">
+            <div class="card" style="margin-bottom: 2rem;">
+                <h3>Orçamento e Estratégia</h3>
+                <p><strong>Investimento:</strong> Valor hipotético de R$ 100,00 por semana, durante um período de três meses.<br>
+                <strong>Divisão:</strong> O primeiro mês será focado na atração de seguidores. O segundo mês focará no engajamento, repetindo-se o ciclo até fechar os 90 dias.<br>
+                <strong>Objetivo Final (fazer a engrenagem girar):</strong> Perfis com quantidade significativa de seguidores e publicações com alto índice de comentários tendem a crescer de forma orgânica e natural.</p>
+            </div>
+
+            <div class="funnel-stage funnel-topo">
+                <h3>Topo de Funil: Descoberta</h3>
+                <div class="funnel-meta">Público: 22 a 50 anos, Brasil (foco no Nordeste)</div>
+                <p><strong>Criativo:</strong> Reels de 15s (manifesto) e vídeo com modelo em ambiente natural.<br>
+                <strong>Copy:</strong> "Contra Mau Olhado: camisetas feitas no Brasil, com alma nordestina e boas vibrações."<br>
+                <strong>CTA:</strong> Saiba mais</p>
+            </div>
+
+            <div class="funnel-stage funnel-meio">
+                <h3>Meio de Funil: Consideração</h3>
+                <div class="funnel-meta">Público: Engajamento 50%+ em vídeos e seguidores de perfis de moda autoral</div>
+                <p><strong>Criativo:</strong> Carrossel de coleção (com guia de medidas) e depoimentos de clientes reais.<br>
+                <strong>Copy:</strong> "Veja por que tanta gente está vestindo Contra Mau Olhado. Feitas no Brasil, com muito carinho."<br>
+                <strong>CTA:</strong> Ver coleção</p>
+            </div>
+
+            <div class="funnel-stage funnel-fundo">
+                <h3>Fundo de Funil: Conversão</h3>
+                <div class="funnel-meta">Público: Visitantes do site (últimos 30 dias), Carrinhos Abandonados e Lookalike 1%</div>
+                <p><strong>Criativo:</strong> Catálogo dinâmico e artes com aviso de Frete Grátis.<br>
+                <strong>Copy:</strong> "Ficou no carrinho? Sua camiseta Contra Mau Olhado está te esperando. Aproveite o frete grátis hoje!"<br>
+                <strong>CTA:</strong> Comprar agora</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contra Mau Olhado &copy; 2026 - Proteção, cultura e a alegria do Nordeste</p>
+        <p><a href="https://contramauolhado.com.br" target="_blank">contramauolhado.com.br</a> | Proposta Estratégica Confidencial</p>
+    </footer>
+
+    <!-- Lógica Dinâmica (JavaScript) -->
+    <script>
+        function openTab(event, tabName) {
+            // Esconde todos os conteúdos
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Remove a classe 'active' de todos os botões
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // Mostra o conteúdo atual e adiciona estado ativo ao botão clicado
+            document.getElementById(tabName).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
